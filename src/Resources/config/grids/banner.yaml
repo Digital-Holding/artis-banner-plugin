@@ -1,0 +1,21 @@
+sylius_grid:
+    grids:
+        odiseo_sylius_banner_plugin_banner:
+            fields:
+                backgroundImage:
+                    type: twig
+                    label: artis_banner_plugin.ui.background_image
+                    path: backgroundImageName
+                    options:
+                        template: "@DHArtisBannerPlugin/Field/_backgroundImage.html.twig"
+            filters:
+                archival:
+                    type: exists
+                    label: sylius.ui.archival
+                    options:
+                        field: archivedAt
+                    default_value: false
+            actions:
+                item:
+                    archive:
+                        type: archive

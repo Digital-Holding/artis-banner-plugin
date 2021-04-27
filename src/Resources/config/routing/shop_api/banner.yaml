@@ -1,0 +1,5 @@
+dh_artis_banner_plugin_show_banner_list:
+    path: /banners
+    methods: [GET]
+    defaults:
+        _controller: dh_artis_banner_plugin.controller.banner.show_list_action

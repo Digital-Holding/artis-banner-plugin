@@ -1,0 +1,15 @@
+imports:
+    - { resource: "@OdiseoSyliusBannerPlugin/Resources/config/config.yaml" }
+    - { resource: "@DHArtisBannerPlugin/Resources/config/grids.yaml" }
+    - { resource: "@DHArtisBannerPlugin/Resources/config/resources.yaml" }
+
+liip_imagine:
+    loaders:
+        banner_image:
+            filesystem:
+                data_root: "%sylius_core.public_dir%/media/banner-image"
+    filter_sets:
+        artis_banner_plugin_background_image:
+            data_loader: banner_image
+            filters:
+                thumbnail: { size: [1127, 300], mode: outbound }

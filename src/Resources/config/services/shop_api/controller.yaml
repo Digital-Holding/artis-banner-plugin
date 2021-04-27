@@ -1,0 +1,9 @@
+services:
+    dh_artis_banner_plugin.controller.banner.show_list_action:
+        class: DH\ArtisBannerPlugin\ShopApi\Controller\ShowBannersListAction
+        public: true
+        arguments:
+            - "@sylius.shop_api_plugin.http.request_based_locale_provider"
+            - "@fos_rest.view_handler"
+            - "@odiseo_sylius_banner_plugin.repository.banner"
+            - "@dh_artis_banner_plugin.factory.banner.banner_view_factory"

@@ -1,0 +1,10 @@
+sylius_resource:
+    resources:
+        odiseo_sylius_banner_plugin.banner:
+            driver: doctrine/orm
+            classes:
+                model: DH\ArtisBannerPlugin\Entity\Banner
+                repository: DH\ArtisBannerPlugin\Repository\BannerRepository
+            translation:
+                classes:
+                    model: DH\ArtisBannerPlugin\Entity\BannerTranslation

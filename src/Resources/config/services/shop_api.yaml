@@ -1,0 +1,3 @@
+imports:
+    - { resource: shop_api/controller.yaml }
+    - { resource: shop_api/factory.yaml }

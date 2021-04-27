@@ -1,0 +1,10 @@
+services:
+    dh_artis_banner_plugin.form.extension.type.banner:
+        class: DH\ArtisBannerPlugin\Form\Extension\BannerTypeExtension
+        tags:
+            - { name: form.type_extension, extended_type: Odiseo\SyliusBannerPlugin\Form\Type\BannerType }
+
+    dh_artis_banner_plugin.form.extension.type.banner_translation:
+        class: DH\ArtisBannerPlugin\Form\Extension\BannerTranslationTypeExtension
+        tags:
+            - { name: form.type_extension, extended_type: Odiseo\SyliusBannerPlugin\Form\Type\BannerTranslationType }

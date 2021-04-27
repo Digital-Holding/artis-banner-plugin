@@ -1,0 +1,10 @@
+artis_banner_plugin:
+    ui:
+        schedule: Schedule
+        background_image: Background image
+    form:
+        banner:
+            starts_at: Starts at
+            ends_at: Ends at
+            background_image: Background image
+            title: Title

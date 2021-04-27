@@ -1,0 +1,2 @@
+artis_banner_plugin_admin_banner:
+    resource: "@DHArtisBannerPlugin/Resources/config/routing/admin/banner.yaml"

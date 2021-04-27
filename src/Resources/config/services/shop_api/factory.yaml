@@ -1,0 +1,8 @@
+services:
+    dh_artis_banner_plugin.factory.banner.banner_view_factory:
+        class: DH\ArtisBannerPlugin\ShopApi\Factory\BannerViewFactory
+        arguments:
+            - "@liip_imagine.service.filter"
+            - "odiseo_sylius_banner_plugin_image"
+            - "odiseo_sylius_banner_plugin_mobile_image"
+            - "artis_banner_plugin_background_image"
