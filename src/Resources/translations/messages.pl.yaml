@@ -12,7 +12,7 @@ odiseo_sylius_banner_plugin:
             translations: Tłumaczenia
             taxons: Taksonomie
             channels: Kanały
-            image: Zdjęcie(Tła)
+            image: Zdjęcie
             mobile_image: Zdjęcie mobilne(Tła)
             url: URL
             main_text: Główny tekst
