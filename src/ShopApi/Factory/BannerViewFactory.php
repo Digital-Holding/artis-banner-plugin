@@ -50,8 +50,11 @@ class BannerViewFactory implements BannerViewFactoryInterface
         $bannerView->url = $banner->getUrl();
 
         $bannerView->imagePath = $this->filterService->getUrlOfFilteredImage($banner->getImageName(), $this->imagefilter);
-        $bannerView->backgroundImagePath = $this->filterService->getUrlOfFilteredImage($banner->getBackgroundImageName(), $this->backgroundImagefilter);
-        $bannerView->mobileImagePath = null !== $banner->getMobileImageName() ? $this->filterService->getUrlOfFilteredImage($banner->getMobileImageName(), $this->mobileImagefilter) : null;
+        $bannerView->backgroundImagePath = null !== $banner->getBackgroundImageName() ?
+            $this->filterService->getUrlOfFilteredImage($banner->getBackgroundImageName(), $this->backgroundImagefilter) :
+            $this->filterService->getUrlOfFilteredImage($banner->getImageName(), $this->imagefilter);
+        $bannerView->mobileImagePath = null !== $banner->getMobileImageName() ?
+            $this->filterService->getUrlOfFilteredImage($banner->getMobileImageName(), $this->mobileImagefilter) : null;
 
         foreach ($banner->getTaxons() as $taxon) {
             $bannerView->taxonomyCodes [] = $taxon->getCode();
