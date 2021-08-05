@@ -8,3 +8,5 @@ artis_banner_plugin:
             ends_at: Ends at
             background_image: Background image
             title: Title
+            image: Image(Background)
+            mobile_image: Mobile image(Background)

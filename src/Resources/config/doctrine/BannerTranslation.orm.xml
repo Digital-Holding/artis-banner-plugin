@@ -7,7 +7,7 @@
 
     <mapped-superclass name="DH\ArtisBannerPlugin\Entity\BannerTranslation" table="odiseo_banner_translation">
 
-        <field name="backgroundImageName" type="string" column="background_image_name"/>
+        <field name="backgroundImageName" type="string" column="background_image_name" nullable="true"/>
         <field name="title" type="string" nullable="true"/>
     </mapped-superclass>
 

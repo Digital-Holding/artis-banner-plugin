@@ -12,14 +12,16 @@ odiseo_sylius_banner_plugin:
             translations: Tłumaczenia
             taxons: Taksonomie
             channels: Kanały
-            image: Zdjęcie
-            mobile_image: Zdjęcie mobilne
+            image: Zdjęcie(Tła)
+            mobile_image: Zdjęcie mobilne(Tła)
             url: URL
+            main_text: Główny tekst
+            secondary_text: Dodatkowy tekst (Opis)
 
 artis_banner_plugin:
     ui:
         schedule: Harmonogram
-        background_image: Zdjęcie tła
+        background_image: Dodatkowe zdjęcie
     form:
         banner:
             starts_at: Data rozpoczęcia
