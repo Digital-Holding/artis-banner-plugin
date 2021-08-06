@@ -2,6 +2,8 @@ sylius_grid:
     grids:
         odiseo_sylius_banner_plugin_banner:
             fields:
+                image:
+                    label: odiseo_sylius_banner_plugin.ui.image
                 backgroundImage:
                     type: twig
                     label: artis_banner_plugin.ui.background_image
