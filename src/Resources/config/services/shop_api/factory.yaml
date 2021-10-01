@@ -6,4 +6,4 @@ services:
             - "odiseo_sylius_banner_plugin_image"
             - "odiseo_sylius_banner_plugin_mobile_image"
             - "artis_banner_plugin_background_image"
-            - "%digital_holding_artis_banner_plugin.api.webp_support%"
+            - "%dh_artis_banner.api.webp_support%"
