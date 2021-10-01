@@ -23,17 +23,22 @@ class BannerViewFactory implements BannerViewFactoryInterface
     /** @var string */
     private $backgroundImagefilter;
 
+    /** @var bool */
+    private $webpSupport;
+
     public function __construct(
         FilterService $filterService,
         string $imagefilter,
         string $mobileImagefilter,
-        string $backgroundImagefilter
+        string $backgroundImagefilter,
+        bool $webpSupport
     )
     {
         $this->filterService = $filterService;
         $this->imagefilter = $imagefilter;
         $this->mobileImagefilter = $mobileImagefilter;
         $this->backgroundImagefilter = $backgroundImagefilter;
+        $this->webpSupport = $webpSupport;
     }
 
     public function create(BannerInterface $banner, string $locale)
@@ -50,10 +55,10 @@ class BannerViewFactory implements BannerViewFactoryInterface
         $bannerView->url = $banner->getUrl();
 
         $bannerView->imagePath = null !== $banner->getBackgroundImageName() ?
-            $this->filterService->getUrlOfFilteredImage($banner->getBackgroundImageName(), $this->backgroundImagefilter) : null;
-        $bannerView->backgroundImagePath = $this->filterService->getUrlOfFilteredImage($banner->getImageName(), $this->imagefilter);
+            $this->filterService->getUrlOfFilteredImage($banner->getBackgroundImageName(), $this->backgroundImagefilter, null, $this->webpSupport) : null;
+        $bannerView->backgroundImagePath = $this->filterService->getUrlOfFilteredImage($banner->getImageName(), $this->imagefilter, null, $this->webpSupport);
         $bannerView->mobileImagePath = null !== $banner->getMobileImageName() ?
-            $this->filterService->getUrlOfFilteredImage($banner->getMobileImageName(), $this->mobileImagefilter) : null;
+            $this->filterService->getUrlOfFilteredImage($banner->getMobileImageName(), $this->mobileImagefilter, null, $this->webpSupport) : null;
 
         foreach ($banner->getTaxons() as $taxon) {
             $bannerView->taxonomyCodes [] = $taxon->getCode();
