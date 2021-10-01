@@ -17,6 +17,8 @@ final class DHArtisBannerExtension extends Extension
         $config = $this->processConfiguration($this->getConfiguration([], $container), $configs);
         $loader = new YamlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
 
+        $container->setParameter('digital_holding_artis_banner_plugin.api.webp_support', $config['api']['webp_support']);
+
         $loader->load('services.yaml');
     }
 
